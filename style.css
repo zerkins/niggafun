@@ -1,0 +1,278 @@
+body {
+  background-color: black;
+    margin-top: 200px;
+}
+#face {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 25vw;
+  height: 30vw;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #face {
+    min-width: 200px;
+    min-height: 240px;
+    margin-top: 100px;
+  }
+}
+@media (min-width: 2000px) {
+  #face {
+    max-width: 500px;
+    max-height: 600px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #face {
+    width: 25vh;
+    height: 30vh;
+  }
+}
+#face .forehead {
+  height: 25%;
+}
+
+.eye-outer {
+  display: inline-block;
+    width: 30%;
+  height: 25%;
+  margin: 0% 4%;
+  position: relative;
+}
+
+#face .eye {
+  width: 100%;
+  height: 100%;
+  border: 6px solid white;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+#face:hover .eye {
+  opacity: 0;
+}
+
+#face:hover .Reye {
+  opacity: 0;
+}
+
+#face .eye-over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background-image: url("https://cdn.glitch.com/92271157-8625-4170-9e81-42b3609c82c7%2Feye-over.png?1543959877535");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 50%;
+  display: none;
+  margin-bottom: 50px;
+}
+
+#face:hover .eye-over {
+  display: block;
+}
+
+#face:hover .Reye-over {
+  display: block;
+}
+
+#face .Reye-over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background-image: url("https://cdn.glitch.com/92271157-8625-4170-9e81-42b3609c82c7%2Feye-over.png?1543959877535");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 50%;
+  display: none;
+  margin-bottom: 50px;
+}
+
+
+#face .Reye {
+  width: 100%;
+  height: 100%;
+
+  border: 6px solid white;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+#face .eye .pupil {
+  background-color: black;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  margin: 0%;
+}
+#face .Reye .pupil {
+  background-color: black;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  margin: 0%;
+}
+#face svg {
+  width: 50%;
+  margin: 30% auto 0px auto;
+  overflow: visible;
+}
+
+#face svg g {
+  -moz-transform-origin: 50px 15px;
+  -ms-transform-origin: 50px 15px;
+  -o-transform-origin: 50px 15px;
+  -webkit-transform-origin: 50px 15px;
+  transform-origin: 50px 15px;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+  stroke-width: 44px;
+  stroke: #ff0000;
+  fill: none;
+  stroke-linecap: round;
+  z-index:-1;
+}
+
+#face svg g {
+  -moz-transform-origin: 50px 15px;
+  -ms-transform-origin: 50px 15px;
+  -o-transform-origin: 50px 15px;
+  -webkit-transform-origin: 50px 15px;
+  transform-origin: 50px 15px;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+  stroke-width: 44px;
+  stroke: #ff0000;
+  fill: none;
+  stroke-linecap: round;
+  z-index:0;
+}
+
+#face.smile svg g {
+  -webkit-transform: scale(3, 4);
+  -moz-transform: scale(3, 4);
+  -ms-transform: scale(3, 4);
+  -o-transform: scale(3, 4);
+}
+
+#face.meh svg g {
+  -webkit-transform: scale(1, -0.01);
+  -moz-transform: scale(1, -0.01);
+  -ms-transform: scale(1, -0.01);
+  -o-transform: scale(1, -0.01);
+}
+
+
+
+#face:hover svg g {
+  -webkit-transform: scale(3, -4);
+  -moz-transform: scale(3, -4);
+  -ms-transform: scale(3, -4);
+  -o-transform: scale(3, -4);
+}
+/* Less mixins */
+.horizontal-translate-align {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.two {
+  transform-origin: 200px 15px;
+  transform: scale(1, 1);
+  transition: all 350ms linear;
+  
+  stroke-linecap: round;
+  z-index:-1
+
+}
+
+.bg {
+  position: relative;
+  top:-90px;
+  stroke-width: 9px;
+  stroke: #000000;
+  fill: none;
+  z-index:1;
+
+}
+
+.easter01 {
+  position: relative;
+  top:-500px;
+  left: 100px;
+  text-decoration: none;
+  font-family: halyard-micro, sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  stroke: #000000;
+  fill: none;
+  z-index:1;
+}
+
+.easter02 {
+  position: relative;
+  top:155px;
+  left: 650px;
+  text-decoration: none;
+  font-family: halyard-micro, sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  stroke: #000000;
+  fill: none;
+  z-index:1;
+}
+
+.easter03 {
+  position: relative;
+  top:55px;
+  left: 450px;
+  text-decoration: none;
+  font-family: halyard-micro, sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  stroke: #000000;
+  fill: none;
+  z-index:0;
+}
+
+a {
+color: black;
+}
+
+a:hover {
+color: red;
+}
